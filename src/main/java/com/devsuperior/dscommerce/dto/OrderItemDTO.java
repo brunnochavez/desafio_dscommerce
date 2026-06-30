@@ -1,11 +1,9 @@
 package com.devsuperior.dscommerce.dto;
-
 import com.devsuperior.dscommerce.entities.OrderItem;
-import com.devsuperior.dscommerce.entities.Product;
 
 public class OrderItemDTO {
 
-    private Long produtcId;
+    private Long productId;
     private String productName;
     private Double price;
     private Integer quantity;
@@ -13,26 +11,26 @@ public class OrderItemDTO {
     public OrderItemDTO() {
     }
 
-    public OrderItemDTO(Long produtcId, String productName, Double price, Integer quantity) {
-        this.produtcId = produtcId;
+    public OrderItemDTO(Long productId, String productName, Double price, Integer quantity) {
+        this.productId = productId;
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;
     }
 
     public OrderItemDTO(OrderItem entity) {
-        produtcId = entity.getProduct().getId();
+        productId = entity.getProduct().getId();
         productName = entity.getProduct().getName();
         price = entity.getPrice();
         quantity = entity.getQuantity();
     }
 
-    public Long getProdutcId() {
-        return produtcId;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProdutcId(Long produtcId) {
-        this.produtcId = produtcId;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public String getProductName() {
